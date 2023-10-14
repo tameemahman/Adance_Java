@@ -100,7 +100,6 @@ public class Testwindow extends javax.swing.JFrame {
         txtdueaount = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        txtdate = new com.toedter.calendar.JDateChooser();
         purchase = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -314,7 +313,6 @@ public class Testwindow extends javax.swing.JFrame {
 
         jButton2.setText("Reset");
         jPanel11.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
-        jPanel11.add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 400, -1));
 
         javax.swing.GroupLayout salesLayout = new javax.swing.GroupLayout(sales);
         sales.setLayout(salesLayout);
@@ -546,7 +544,6 @@ public class Testwindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtactualprice;
     private javax.swing.JTextField txtcashreceived;
     private javax.swing.JTextField txtcustomername;
-    private com.toedter.calendar.JDateChooser txtdate;
     private javax.swing.JTextField txtdiscount;
     private javax.swing.JTextField txtdueaount;
     private javax.swing.JTextField txtproductname;
