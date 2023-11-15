@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 11, 2023 10:16:04 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Student" table="student" catalog="jsp55" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="givenName" type="string">
+            <column name="givenName" length="45" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="45" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="45" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

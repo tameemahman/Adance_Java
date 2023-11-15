@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:link value="Add Student" outcome="addstudent.xhtml" />
+        
+        <h:dataTable value="#{studentManageBean.showAllStudent()}" var="s">
+            <h:column>    				
+                <f:facet name = "header">Id</f:facet>    				
+                    #{s.id}
+            </h:column>
+            <h:column>    				
+                <f:facet name = "header">Given Name</f:facet>    				
+                    #{s.givenName}
+            </h:column>
+            
+            <h:column>    				
+                <f:facet name = "header">Last Name</f:facet>    				
+                    #{s.lastName}
+            </h:column>
+
+            <h:column>    				
+                <f:facet name = "header">Gender</f:facet>    				
+                    #{s.gender}
+            </h:column>
+
+            <h:column>    				
+                <f:facet name = "header">Subject</f:facet>    				
+                    #{s.subject}
+            </h:column>
+            
+            <h:column>
+                <!-- Button for Editing -->
+                <f:facet name="header">Action</f:facet>
+                <h:form>
+                    <h:commandButton value="Edit" action="#{studentManageBean.editStudent(s.id)}" />
+                </h:form>
+
+                <h:form>
+                    <h:commandButton value="Delete" action="#{studentManageBean.delete(s.id)}"  onclick="return confirm('Are u Sure?')"/>
+                </h:form>
+            </h:column>
+
+
+        </h:dataTable>
+    </h:body>
+</html>
+

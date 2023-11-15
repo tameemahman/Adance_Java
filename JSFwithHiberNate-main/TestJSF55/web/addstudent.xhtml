@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <h:panelGrid>
+            <h:commandButton action="viewallstudent.xhtml" value="View All"></h:commandButton>
+        </h:panelGrid> 
+        <h:form>
+            <h:outputLabel>Given Name </h:outputLabel>
+            <h:inputText value="#{studentManageBean.student.givenName}"></h:inputText>
+            <br/>
+            <h:outputLabel>Last Name </h:outputLabel>
+            <h:inputText value="#{studentManageBean.student.lastName}"></h:inputText>
+            <br/>
+            <h:outputLabel>Gender  </h:outputLabel>
+
+            <h:selectOneRadio value="#{studentManageBean.student.gender}">
+                <f:selectItem itemValue = "Male" itemLabel = "Male" /> 
+                <f:selectItem itemValue = "Female" itemLabel = "Female" />
+            </h:selectOneRadio>
+
+
+            <h:outputLabel>Subject </h:outputLabel>
+            <h:selectOneMenu value="#{studentManageBean.student.subject}">
+                <f:selectItem itemValue="JEE" itemLabel="JEE" />
+                <f:selectItem itemValue="C#" itemLabel="C#" />
+                <f:selectItem itemValue="NT" itemLabel="NT" />
+            </h:selectOneMenu>
+
+            <br/>
+            <h:commandButton action="#{studentManageBean.saveStudent()}" value="Save"></h:commandButton>
+        </h:form>
+
+
+        
+
+    </h:body>
+</html>
+
