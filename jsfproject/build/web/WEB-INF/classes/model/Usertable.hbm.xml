@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 15, 2023 10:46:14 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Usertable" table="usertable" catalog="jsftable" optimistic-lock="version">
+        <id name="uid" type="int">
+            <column name="uid" />
+            <generator class="assigned" />
+        </id>
+        <property name="fullname" type="string">
+            <column name="fullname" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
